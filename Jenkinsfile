@@ -15,7 +15,7 @@ pipeline {
                     def report = readFile('gitleaks-report.json')
                     if (report.contains('"Rule":')) {
                         emailext(
-                            to: 'your-email@gmail.com',
+                            to: 'na8756846@gmail.com',
                             subject: '🚨 Jenkins Alert: Secrets found!',
                             body: 'Gitleaks detected secrets in the latest push. Deployment aborted.'
                         )
@@ -34,3 +34,4 @@ pipeline {
         }
     }
 }
+
